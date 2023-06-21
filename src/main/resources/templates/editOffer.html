@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+        <form th:action = "@{/offers/{id}/edit(id=${offer.id})}" th:method="post" th:object="${offer}">
+            <label>Описание</label>
+            <input th:field="*{description}" type="text"/>
+            <label>Цена</label>
+            <input th:field="*{price}" type="text"/>
+            <label>Снимка</label>
+            <input th:field="*{imageUrl}" type="text"/>
+            <button type="submit">Sumbit</button>
+        </form>
+</body>
+</html>
